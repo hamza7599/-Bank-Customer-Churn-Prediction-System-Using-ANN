@@ -14,8 +14,8 @@ st.set_page_config(page_title="Bank Churn Portal & Dashboard", layout="wide", in
 @st.cache_resource
 def load_model_resources():
     try:
-        model = tf.keras.models.load_model('churn_ann_model.keras')
-        preprocessor = joblib.load('preprocessor.joblib')
+        model = tf.keras.models.load_model('./churn_ann_model.keras')
+        preprocessor = joblib.load('./preprocessor.joblib')
         return model, preprocessor
     except Exception as e:
         st.error(f"Error loading model or preprocessor: {e}")
