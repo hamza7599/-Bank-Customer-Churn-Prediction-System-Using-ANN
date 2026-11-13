@@ -26,7 +26,7 @@ model, preprocessor = load_model_resources()
 # Load default dataset safely for the visualization dashboard
 @st.cache_data
 def load_default_data():
-    default_path = '/content/Churn_Modelling.csv'
+    default_path = './Churn_Modelling.csv'
     if os.path.exists(default_path):
         return pd.read_csv(default_path)
     return None
